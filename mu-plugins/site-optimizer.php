@@ -33,24 +33,6 @@ function auto_update_specific_plugins ( $update, $item ) {
 }
 add_filter( 'auto_update_plugin', 'auto_update_specific_plugins', 10, 2 );
 
-/** Hide Administrator From User List **/
-function isa_pre_user_query($user_search) {
-	$user = wp_get_current_user();
-	if (!current_user_can('administrator')) { // Is Not Administrator - Remove Administrator
-		global $wpdb;
-
-		$user_search->query_where =
-			str_replace('WHERE 1=1',
-				"WHERE 1=1 AND {$wpdb->users}.ID IN (
-                 SELECT {$wpdb->usermeta}.user_id FROM $wpdb->usermeta 
-                    WHERE {$wpdb->usermeta}.meta_key = '{$wpdb->prefix}capabilities'
-                    AND {$wpdb->usermeta}.meta_value NOT LIKE '%administrator%')",
-				$user_search->query_where
-			);
-	}
-}
-add_action('pre_user_query','isa_pre_user_query');
-
 
 // directly from https://wordpress.org/plugins/disable-emojis/
 /**
@@ -66,6 +48,7 @@ function tiny_disable_emojis() {
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 	add_filter( 'tiny_mce_plugins', 'tiny_disable_emojis_tinymce' );
 }
+
 
 
 
