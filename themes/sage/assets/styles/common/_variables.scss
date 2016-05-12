@@ -1,0 +1,35 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Fonts
+$font-primary: 'Droid Serif', serif;
+$font-secondary: 'Droid Sans', sans-serif;
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #E6E2AF;
+$brand-secondary:       #A7A37E;
+$brand-complementary:   #EFECCA;
+$brand-accent:          #046380;
+$brand-last:            #002F2F;
+
+$dark: #333;
+$light: white;
+$gray: #777;
+$lightgray: #999999;
+
+// Media Query Sizes
+$small: 600px;
+$medium: 900px;
+$large: 1200px;
+
+// Menu & Header helpers
+$header-nav-zindex: 999;
+
+// Element Colors
+$text_color: $brand-primary;
+$link_color: $brand-accent;
+$border_color: $brand-accent;

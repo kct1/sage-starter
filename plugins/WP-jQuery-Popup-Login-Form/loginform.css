@@ -1,0 +1,39 @@
+#loginContainer.show {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+#loginContainer {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.42);
+    width: 100%;
+    z-index: 99;
+    height: 100%;
+    top: 0;
+    display: none;
+}
+#loginContainer p {
+    margin: 0 0 10px 0;
+}
+#loginForm {
+    text-align: center;
+    background: #CECECE;
+    padding: 30px;
+    border-radius: 3px;
+    color: white;
+}
+#loginForm input {
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 3px;
+    border: none;
+}
+#loginForm input#wp-submit {
+    padding: 10px 20px;
+    color: white;
+    background: gray;
+}
+#loginForm input#wp-submit:hover {
+	background: green;
+}
+

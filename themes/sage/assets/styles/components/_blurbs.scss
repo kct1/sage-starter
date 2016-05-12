@@ -1,0 +1,46 @@
+.blurb {
+  margin: 3em 0;
+  text-align: center;
+  color: $brand-accent;
+  &:hover i {
+    color: $brand-primary;
+  }
+  &:hover i:after {
+    background: $brand-last;
+    border-color: $brand-last;
+  }
+  i {
+    font-size: 5em;
+    color: $brand-accent;
+    position: relative;
+    width: 100%;
+    height: 1em;
+    &:before {
+      border-radius: 90%;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:after {
+      content: " ";
+      background: transparent;
+      border: 5px solid $brand-accent;
+      border-radius: 90%;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+
+  }
+}

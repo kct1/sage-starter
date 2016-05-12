@@ -1,0 +1,24 @@
+footer {
+  padding: 2em 0;
+  background: $dark;
+  color: $brand-complementary;
+  text-align: center;
+  a {
+    color: $brand-complementary;
+  }
+  p {
+    margin: 0;
+  }
+  .socialIcons li {
+    display: inline-block;
+  }
+
+}
+@media screen and (min-width: $small) {
+  .footer-left {
+    float: left;
+  }
+  .footer-right {
+    float: right;
+  }
+}

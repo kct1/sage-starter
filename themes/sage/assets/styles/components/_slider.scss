@@ -1,0 +1,33 @@
+.slides {
+  background: black;
+  height: 60vh;
+  p {
+    font-size: 1em;
+  }
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+  opacity: .8;
+  height: 100%;
+  max-width: initial;
+}
+
+.carousel-indicators li {
+  padding: 0;
+}
+.carousel-indicators li.active {
+  height: 12px;
+}
+
+@media screen and (min-width: $small) {
+  .slides {
+    max-height: 500px;
+    min-height: 70vh;
+    img {
+      opacity: .8;
+    }
+  }
+  .carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    min-width: 100%;
+    height: auto;
+  }
+}

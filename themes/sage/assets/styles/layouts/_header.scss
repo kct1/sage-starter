@@ -1,0 +1,68 @@
+header.banner {
+  text-align: center;
+}
+header.banner .container {
+  padding: 1em 0;
+  .navbar-brand {
+    padding: 0;
+    height: 100%;
+    #logo {
+      margin: 0;
+      height: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+  .phoneNumber {
+    font-size: 1.5em;
+    margin: .8em 0 .2em;
+  }
+  .socialIcons ul {
+    margin: 0;
+    li {
+      display: inline-block;
+    }
+  }
+
+}
+@media screen and (min-width: $small) {
+  header.banner {
+    .navbar-brand {
+      float: none;
+    }
+    nav {
+      clear: both;
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: $large) {
+  header.banner {
+    .navbar-brand {
+      float: left;
+    }
+    .header-menu {
+      float: right;
+    }
+    .container {
+      position: relative;
+    }
+    .phoneNumber {
+      float: right;
+    }
+    .socialIcons {
+      clear: both;
+      text-align: right;
+    }
+    nav {
+      clear: both;
+      float: right;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,32 @@
+//.button, .woocommerce a.button {
+//  transition: 400ms all ease;
+//  background: transparent;
+//  border: 1px solid $brand-primary;
+//  color: $brand-primary;
+//  font-weight: 100;
+//  padding: 10px 20px;
+//  font-size: 1.2em;
+//  position: relative;
+//  border-radius: 0;
+//  line-height: 1.4em;
+//  &:hover {
+//    background: $brand-primary;
+//    color: $light;
+//    padding-right: 30px;
+//  }
+//  &:after {
+//    content: "\f105";
+//    font-family: 'FontAwesome';
+//    top: 8px;
+//    font-size: 1.2em;
+//    position: absolute;
+//    opacity: 0;
+//    color: transparent;
+//    transition: 400ms all ease;
+//  }
+//  &:hover:after {
+//    opacity: 1;
+//    padding-left: 11px;
+//    color: $light;
+//  }
+//}
