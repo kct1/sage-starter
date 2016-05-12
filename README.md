@@ -21,8 +21,7 @@
 13. Go to Tools > Migrate DB
 14. Select pull:
 
-    `https://acf.knoxtest.com
-     oxi2jH8z0QfDqUv4gqToRMDcr2TnqF9L`
+    `https://acf.knoxtest.comoxi2jH8z0QfDqUv4gqToRMDcr2TnqF9L`
 
 15. It should work? #crossfingers
 
