@@ -24,3 +24,14 @@
      oxi2jH8z0QfDqUv4gqToRMDcr2TnqF9L`
 
 15. It should work? #crossfingers
+
+
+## ...assuming it did
+
+1. Rename Sage to the Client's Name
+2. Edit style.css to Client's and Your Info
+3. `cd` into the theme
+4. `npm i`
+5. `bower i`
+6. `gulp`
+7. `gulp watch`
