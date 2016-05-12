@@ -15,6 +15,7 @@
     - database name: scotchbox
     - username: root
     - password: root
+    - prefix: `098724_`
 
 12. Go to Plugins > Custom Development Tools: Activate
 13. Go to Tools > Migrate DB
