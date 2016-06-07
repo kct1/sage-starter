@@ -1,0 +1,12 @@
+.video-scale {
+  position: relative;
+  padding-bottom: 30%;
+  height: 0; overflow: hidden;
+  max-width: 100%;
+}
+.video-scale iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

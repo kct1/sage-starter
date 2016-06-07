@@ -1,17 +1,24 @@
 .blurb {
   margin: 3em 0;
   text-align: center;
-  color: $brand-accent;
+  h1,h2,h3,h4,h5 {
+    color: $blurb-heading-color;
+  }
+  p {
+    color: $blurb-text-color;
+  }
   &:hover i {
-    color: $brand-primary;
+    color: $blurb-icon-hover;
+    transform: rotate(15deg);
   }
   &:hover i:after {
-    background: $brand-last;
-    border-color: $brand-last;
+    background: $blurb-icon-background-hover;
+    border-color: $blurb-icon-border-hover;
   }
   i {
+    transition: 400ms all ease;
     font-size: 5em;
-    color: $brand-accent;
+    color: $blurb-icon;
     position: relative;
     width: 100%;
     height: 1em;
@@ -24,11 +31,13 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+      // Random Centering Fix - This seems ridiculous
+      padding-left: 7px;
     }
     &:after {
       content: " ";
-      background: transparent;
-      border: 5px solid $brand-accent;
+      background: $blurb-icon-background;
+      border: 5px solid $blurb-icon-border;
       border-radius: 90%;
       width: 150px;
       height: 150px;

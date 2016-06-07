@@ -1,32 +1,105 @@
-//.button, .woocommerce a.button {
-//  transition: 400ms all ease;
-//  background: transparent;
-//  border: 1px solid $brand-primary;
-//  color: $brand-primary;
-//  font-weight: 100;
-//  padding: 10px 20px;
-//  font-size: 1.2em;
-//  position: relative;
-//  border-radius: 0;
-//  line-height: 1.4em;
-//  &:hover {
-//    background: $brand-primary;
-//    color: $light;
-//    padding-right: 30px;
-//  }
-//  &:after {
-//    content: "\f105";
-//    font-family: 'FontAwesome';
-//    top: 8px;
-//    font-size: 1.2em;
-//    position: absolute;
-//    opacity: 0;
-//    color: transparent;
-//    transition: 400ms all ease;
-//  }
-//  &:hover:after {
-//    opacity: 1;
-//    padding-left: 11px;
-//    color: $light;
-//  }
-//}
+[type="submit"],
+.btn,
+.button,
+a.button,
+button.button,
+input.button,
+#review_form #submit,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce ul.products li.product .button,
+.woocommerce .cart .button,
+.woocommerce .cart input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button
+{
+  transition: 400ms all ease;
+  background: $button-background;
+  border: 1px solid $button-border;
+  color: $button-text;
+  font-weight: 100;
+  padding: 0 1em;
+  font-size: 1em;
+  position: relative;
+  border-radius: 0;
+  line-height: $fields-height;
+  &:after {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    top: 0;
+    right: 12px;
+    font-size: 1em;
+    line-height: $fields-height;
+    position: absolute;
+    opacity: 0;
+    color: $button-background-hover;
+    transition: 400ms all ease;
+  }
+  &:hover {
+    background: $button-background-hover;
+    border-color: $button-border-hover;
+    color: $button-text-hover;
+    padding-right: 30px;
+  }
+  &:hover:after {
+    opacity: 1;
+    padding-left: 11px;
+    color: $button-text-hover;
+  }
+}
+/* Fix for
+ * 1. <input> which doesn't work with :after
+ * 2. searchform.php submit button
+ */
+input[type="submit"], #search-submit  {
+  &:after {
+    content: " " !important;
+  }
+}
+input[type="submit"] {
+  &:hover {
+    padding-right: 1em !important;
+  }
+}
+/* Fix for
+ * <a> Tags, since they don't want to abide by line-height.
+ */
+
+a.button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/*
+ * For Dark Modules
+ */
+.dark {
+  [type="submit"],
+  .btn,
+  .button,
+  a.button,
+  button.button,
+  input.button,
+  #review_form #submit,
+  .woocommerce #respond input#submit.alt,
+  .woocommerce a.button.alt,
+  .woocommerce button.button.alt,
+  .woocommerce input.button.alt,
+  .woocommerce ul.products li.product .button,
+  .woocommerce .cart .button,
+  .woocommerce .cart input.button,
+  .woocommerce #respond input#submit,
+  .woocommerce a.button,
+  .woocommerce button.button,
+  .woocommerce input.button
+  {
+    border-color: $light;
+    background: transparent;
+    color: $light;
+  }
+}

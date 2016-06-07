@@ -1,0 +1,26 @@
+
+form#search-form {
+  display: flex; // Quick Fix for Height
+}
+.search-wrap {
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
+}
+input#search-input {
+  float: left;
+  width: 80%;
+  margin: 0;
+}
+button#search-submit {
+  float: right;
+  width: 20%;
+  line-height: $fields-height;
+  height: initial;
+  margin: initial;
+  padding: 0;
+  -webkit-appearance: button;
+  overflow: initial;
+}
+
+

@@ -1,4 +1,4 @@
-<div class="socialIcons">
+<div class="social-icons">
     <ul>
     <?php if (get_theme_mod('facebook')): ?>
         <li><a href="<?php echo get_theme_mod('facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>

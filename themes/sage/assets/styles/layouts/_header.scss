@@ -1,33 +1,45 @@
 header.banner {
   text-align: center;
+  z-index: $header-nav-zindex;
+  background: $header-background-color;
 }
+
 header.banner .container {
-  padding: 1em 0;
+  height: inherit;
   .navbar-brand {
+    width: 100%;
     padding: 0;
-    height: 100%;
-    #logo {
+    height: inherit;
+    h1#logo {
       margin: 0;
       height: inherit;
     }
     img {
       max-width: 100%;
-      height: auto;
       max-height: 100%;
     }
   }
-  .phoneNumber {
-    font-size: 1.5em;
-    margin: .8em 0 .2em;
+  a.phoneNumber {
+    line-height: $fields-height;
   }
-  .socialIcons ul {
+  .social-icons ul {
     margin: 0;
     li {
       display: inline-block;
+      line-height: 1em;
+      padding: 0;
+    }
+    a {
+      padding-right: 6px;
+      line-height: $fields-height;
+      &:hover i:before {
+        color: w
+      }
     }
   }
 
 }
+
 @media screen and (min-width: $small) {
   header.banner {
     .navbar-brand {
@@ -39,23 +51,42 @@ header.banner .container {
     }
   }
 }
-@media screen and (min-width: $large) {
+
+@media screen and (min-width: $medium) {
   header.banner {
-    .navbar-brand {
-      float: left;
-    }
-    .header-menu {
-      float: right;
-    }
     .container {
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > * {
+        flex: 1;
+      }
+    }
+    .navbar-brand {
+      float: left;
+      h1#logo {
+
+      }
+      img {
+        float: left;
+        //height: 100%;
+      }
+    }
+    #headerMenu {
+      float: right;
     }
     .phoneNumber {
       float: right;
     }
-    .socialIcons {
+    .social-icons {
       clear: both;
       text-align: right;
+      ul {
+        padding: 0;
+      }
+      li {
+      }
     }
     nav {
       clear: both;

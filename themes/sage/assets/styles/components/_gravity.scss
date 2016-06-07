@@ -1,0 +1,28 @@
+.gform_wrapper .top_label input.medium, .gform_wrapper .top_label select.medium {
+  width: 100% !important;
+}
+
+.gform_wrapper .top_label input.small, .gform_wrapper .top_label select.small {
+  width: 100% !important;
+}
+
+.gform_heading {
+  display: none;
+}
+
+.gform_wrapper {
+  textarea {
+    width: 100% !important;
+    }
+  input {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    &[type="text"] {
+      text-indent: 1em !important;
+    }
+    &[aria-label="First name"], &[aria-label="Last name"] {
+      /* 99.8 because it makes room for border... smh */
+      width: 99.8% !important;
+    }
+  }
+}

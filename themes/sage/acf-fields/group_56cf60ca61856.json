@@ -3,8 +3,24 @@
     "title": "Home",
     "fields": [
         {
-            "key": "field_56cf6929a5490",
+            "key": "field_574dc59e0879e",
             "label": "Hero",
+            "name": "hero",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56cf6929a5490",
+            "label": "Your first impression",
             "name": "hero",
             "type": "flexible_content",
             "instructions": "",
@@ -135,8 +151,24 @@
             ]
         },
         {
-            "key": "field_56cf6616fd1fb",
+            "key": "field_574dc521a7a32",
             "label": "Blurbs",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56cf6616fd1fb",
+            "label": "What your users should know about you",
             "name": "blurbs",
             "type": "flexible_content",
             "instructions": "",
@@ -248,9 +280,25 @@
             ]
         },
         {
+            "key": "field_574dc4dfb5ebc",
+            "label": "About",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_56cf61ffa64f6",
-            "label": "Info Areas",
-            "name": "about",
+            "label": "A short intro",
+            "name": "about_field",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -266,14 +314,56 @@
             "layouts": [
                 {
                     "key": "56cf62146a416",
-                    "name": "box_of_text",
+                    "name": "about_layout",
                     "label": "Sections",
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_56cf621fa64f7",
+                            "label": "Heading",
+                            "name": "about_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56cf6230a64f8",
+                            "label": "Text",
+                            "name": "about_text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
                             "key": "field_572cc3b999de0",
-                            "label": "Image",
-                            "name": "image",
+                            "label": "Background Image",
+                            "name": "about_image",
                             "type": "image",
                             "instructions": "Optional",
                             "required": 0,
@@ -293,90 +383,6 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        },
-                        {
-                            "key": "field_56cf621fa64f7",
-                            "label": "Heading",
-                            "name": "heading",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "H3 tag",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_56cf6230a64f8",
-                            "label": "Text",
-                            "name": "text",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "wpautop",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_56cf6f49b87ca",
-                            "label": "Button Text",
-                            "name": "button_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_56cf6f52b87cb",
-                            "label": "Button Url",
-                            "name": "button_url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "readonly": 0,
-                            "disabled": 0
                         }
                     ],
                     "min": "",
@@ -415,5 +421,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1463076452
+    "modified": 1464715190
 }

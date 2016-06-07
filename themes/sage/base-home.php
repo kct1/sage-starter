@@ -1,5 +1,5 @@
 <?php
-
+/* Template Name: Home Template */
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
@@ -19,32 +19,50 @@ use Roots\Sage\Wrapper;
 do_action( 'get_header' );
 get_template_part( 'templates/header' );
 ?>
-<div class="wrap container" role="document">
+<div class="wrap" role="document">
 	<div class="content row">
 		<main class="main">
 			<?php
-			/**
-			 * Template Name: Home Template
-			 */
-			?>
-			<?php /* Don't use the slider, unless the client specifically requires it.  It's bad for conversion */
-			      //include 'modules/hero-slider.php' ?>
-			<?php include 'modules/hero.php' ?>
+			/*
+			FEATURES! ...and other things to know
+			1. CSS Animations! (via http://animate.css) visit to see the options
+				1.1 Samples are set up on _hero.scss in the /assets/ folder
+				1.2 Example:
+					.hero_unit {
+					  animation: fadeInRight 2s;
+					}
+					.hero button:hover {
+					  animation: shake 1s;
+					}
+			2. Parallax! (via https://github.com/pixelcog/parallax.js/)
+				2.1 Notice the "parallax-container" class and all the data attributes below it
+				2.2 Also Notice "data-image-src" this is where the image url needs to spit out.
+				2.3 Example:
+					<section class="row about parallax-container"
+							 data-parallax="scroll"
+							 data-bleed="10"
+							 data-speed="0.2"
+							 data-image-src="<?php the_sub_field('image');?>"
+							 data-natural-width="1400"
+							 data-natural-height="1400">
+						  <div class="box">
+							<h3><?php the_sub_field( 'heading' ); ?></h3>
+							<p><?php the_sub_field( 'text' ); ?></p>
+						</div>
+					</section>
+			*/ ?>
 
-			<section class="about row ">
-				<?php include 'modules/about.php' ?>
-			</section>
-			<section class="blurbs row">
-				<?php include 'modules/blurbs.php'; ?>
-			</section>
-			<section class="testimonials row">
-				<?php include 'modules/jetpack-testimonials.php' ?>
-			</section>
-			<section class="call-to-action row">
-				<?php /* This is the "Contact Us" form */
-				gravity_form( 1, false, false, false, '', true );
-				?>
-			</section>
+			<?php require_once( 'modules/hero.php' ); ?>
+
+			<?php require_once( 'modules/blurbs.php' ); ?>
+
+			<?php require_once( 'modules/about.php' ); ?>
+
+			<?php require_once( 'modules/jetpack-testimonials.php' ); ?>
+
+			<?php require_once( 'modules/cta.php' ); ?>
+
+			<?php require_once ( 'modules/video.php' ); ?>
 
 
 		</main><!-- /.main -->

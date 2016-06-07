@@ -1,28 +1,26 @@
 /*
  * Homepage
  */
-.about {
-  text-align: center;
-  margin: 40px 0 50px;
+// Header
+.home {
+  header.banner {
+
+  }
 }
+
+
+/* About */
+.home {
+  .about {
+    text-align: center;
+  }
+}
+
 
 @media screen and (min-width: $medium) {
 
 }
+
 @media screen and (min-width: $large) {
-body.home .wrap.container {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  > .row {
-    margin: 0;
-  }
-  main.main {
-    padding: 0;
-    margin: 0;
-  }
-}
-  .row {
-    margin: 0 5%;
-  }
+
 }

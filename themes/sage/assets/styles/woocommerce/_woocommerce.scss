@@ -1,0 +1,9 @@
+.woocommerce-cart table.cart input,
+.woocommerce-cart table.cart td.actions .coupon .input-text{
+  line-height: $fields-height;
+  padding: 0;
+}
+.woocommerce-page input#coupon_code {
+  text-indent: .5em;
+  width: 130px;
+}

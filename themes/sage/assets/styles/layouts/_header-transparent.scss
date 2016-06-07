@@ -1,0 +1,26 @@
+/* Add the classes here for each page you want a transparent header
+ * i.e:
+ *  .home, .about, .contact {
+ *    stuff { foo: bar; }
+ *   }
+ */
+.home {
+  header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  nav.main-navigation {
+    a, i:before, button:after {
+      color: $light !important;
+    }
+  }
+  .hero.jumbotron {
+    /* Change to 100vh if you want the full screen height */
+    height: 80vh;
+    /* On full height, we want to make sure the tagline is far enough away from the navbar */
+    align-items: flex-end;
+  }
+}

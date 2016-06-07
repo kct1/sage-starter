@@ -21,8 +21,8 @@ function admin_assets(){
 }
 
 function assets(){
-  wp_enqueue_style('roots-share-buttons', plugins_url('/assets/styles/share-buttons.css', ROOTS_SHARE_FOLDER), array());
-  wp_enqueue_script('roots-share-buttons', plugins_url('/assets/scripts/share-buttons.js', ROOTS_SHARE_FOLDER), array('jquery'), true);
+//  wp_enqueue_style('roots-share-buttons', get_template_directory_uri('/assets/styles/share-buttons.css'), array());
+//  wp_enqueue_script('roots-share-buttons', get_template_directory_uri('/assets/scripts/share-buttons.js'), array('jquery'), true);
 }
 
 function settings_init() {

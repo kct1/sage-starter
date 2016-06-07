@@ -1,10 +1,31 @@
 footer {
   padding: 2em 0;
   background: $dark;
-  color: $brand-complementary;
+  color: $light;
   text-align: center;
+  .widget-container {
+    @include flexbox(center);
+    align-items: flex-start;
+    > * {
+      min-width: 290px; // Because iPhone 320 subtract .container 15px per side (30px total)
+    }
+  }
+  .widget {
+    vertical-align: top;
+
+    h3 {
+      text-align: left;
+    }
+    li {
+      list-style-type: circle;
+    }
+    ul {
+      text-align: left;
+      padding-left: 2em;
+    }
+  }
   a {
-    color: $brand-complementary;
+    color: $light;
   }
   p {
     margin: 0;
@@ -12,13 +33,28 @@ footer {
   .socialIcons li {
     display: inline-block;
   }
-
 }
-@media screen and (min-width: $small) {
+
+@media screen and (min-width: $medium) {
+  footer {
+    .widget-container {
+      > * {
+        min-width: initial;
+      }
+    }
+    .widget {
+      display: inline-block;
+      width: 24.7%; // 25% didn't work
+    }
+  }
+
   .footer-left {
     float: left;
   }
   .footer-right {
     float: right;
+    li {
+      display: inline-block;
+    }
   }
 }

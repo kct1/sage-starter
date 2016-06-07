@@ -1,9 +1,13 @@
 {
   "dependencies": {
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
     "main.js": {
       "files": [
         "scripts/main.js",
-        "scripts/navigation.js"
+        "scripts/navigation.js",
+        "../bower_components/parallax.js/parallax.js"
       ],
       "main": true
     },
@@ -17,9 +21,6 @@
       "files": [
         "scripts/customizer.js"
       ]
-    },
-    "jquery.js": {
-      "bower": ["jquery"]
     }
   },
   "config": {

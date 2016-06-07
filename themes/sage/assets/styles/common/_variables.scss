@@ -1,25 +1,19 @@
 // Glyphicons font path
-$icon-font-path:        "../fonts/";
+$icon-font-path: "../fonts/";
 
 // Fonts
 $font-primary: 'Droid Serif', serif;
 $font-secondary: 'Droid Sans', sans-serif;
 
+// Responsible for cohesive input height & button height
+$fields-height: 2.5em;
+
 // Grid settings
-$main-sm-columns:       12;
-$sidebar-sm-columns:    4;
+$main-sm-columns: 12;
+$sidebar-sm-columns: 4;
 
-// Colors
-$brand-primary:         #E6E2AF;
-$brand-secondary:       #A7A37E;
-$brand-complementary:   #EFECCA;
-$brand-accent:          #046380;
-$brand-last:            #002F2F;
-
-$dark: #333;
-$light: white;
-$gray: #777;
-$lightgray: #999999;
+/* !important: content should never be more than 55-ish characters per line, it just becomes unreadable */
+$content-width: 30.55555em;
 
 // Media Query Sizes
 $small: 600px;
@@ -29,7 +23,64 @@ $large: 1200px;
 // Menu & Header helpers
 $header-nav-zindex: 999;
 
-// Element Colors
-$text_color: $brand-primary;
-$link_color: $brand-accent;
-$border_color: $brand-accent;
+/*
+ * Colors
+ */
+$dark: #333;
+$light: white;
+$gray: #777;
+$lightgray: #999999;
+
+// Brand Colors Specifics - Delete these value and update the rest of the sheet to whatever you want!
+$emerald: #2ecc71;
+$belizehold: #2980b9;
+$carrot: #e67e22;
+$pink: #eaaae4;
+
+// General
+$sage-body-background: $light;
+$text-color: $dark;
+$header-color: $carrot;
+$body-links: $carrot;
+$body-links-hover: $emerald;
+
+// Header
+$header-background-color: transparent;
+
+// Non-Mobile Nav
+$nav-text-color: $emerald; /* probably not needed, but just in case */
+$nav-link-color: $emerald;
+$nav-link-color-hover: $belizehold;
+$nav-dropdown-background: $carrot;
+
+// Mobile Nav Button
+$mobile-nav-button-text: $light;
+$mobile-nav-border-color: $light;
+$mobile-nav-button-background: $carrot;
+
+// Mobile Nav Popup
+$mobile-nav-popup-background: $carrot;
+$mobile-nav-text-color: $light;
+$mobile-nav-link-color: $light;
+
+// Buttons
+$button-background: $belizehold;
+$button-border: $belizehold;
+$button-text: $light;
+// Buttons:hover
+$button-background-hover: $carrot;
+$button-border-hover: $carrot;
+$button-text-hover: $light;
+
+// Blurbs
+$blurb-heading-color: $carrot;
+$blurb-text-color: $dark;
+// Blurb Icons
+$blurb-icon: $light;
+$blurb-icon-border: $emerald;
+$blurb-icon-background: $emerald;
+// Blurb Icon Hover
+$blurb-icon-hover: $light;
+$blurb-icon-border-hover: $carrot;
+$blurb-icon-background-hover: $carrot;
+

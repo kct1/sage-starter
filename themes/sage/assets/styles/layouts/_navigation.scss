@@ -13,16 +13,17 @@ nav.main-navigation {
       bottom: -50px;
     }
   }
-  a {
+  .menu-item a {
+    line-height: $fields-height;
     display: block;
-    padding: 0.8em 0;
     position: relative;
     text-decoration: none;
   }
   /* General */
   li {
     position: relative;
-    padding: 0 20px;
+    //padding: 0 20px;
+
   }
   ul {
     display: none;
@@ -30,7 +31,7 @@ nav.main-navigation {
     margin: 0;
     &.toggled-on {
       display: block;
-     > ul {
+      > ul {
         display: block;
       }
     }
@@ -49,7 +50,7 @@ nav.main-navigation {
   .nav-menu {
     padding: 1em;
     margin-bottom: 4em;
-    background: $dark;
+    background: $mobile-nav-popup-background;
   }
   .nav-menu > ul > li:first-child,
   .nav-menu > li:first-child {
@@ -72,18 +73,18 @@ nav.main-navigation {
     content: "";
     height: 27px;
     width: 27px;
-    top: 12px;
-    right: 6px;
+    top: 7px;
+    right: 0px;
     padding: 0;
     position: absolute;
     text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
     &:after {
-      content: "\f078";
+      content: "\f107";
       font-family: 'FontAwesome';
-      font-size: 14px;
+      font-size: 1em;
       line-height: 27px;
       position: relative;
-      top: 0;
+      top: 2px;
       width: 42px;
     }
     &:hover,
@@ -94,7 +95,7 @@ nav.main-navigation {
       outline: 1px solid rgba(51, 51, 51, 0.3);
     }
     &.toggle-on:after {
-      content: "\f077";
+      content: "\f106";
     }
   }
   &.toggled {
@@ -115,91 +116,67 @@ nav.main-navigation {
     font-family: $font-secondary;
   }
   a, i:before, button:after {
-    color: $light;
+    color: $mobile-nav-link-color;
   }
   button.menu-toggle {
-    background: $dark;
-    color: $light;
-    border: 1px solid $light;
+    background: $mobile-nav-button-background;
+    color: $mobile-nav-button-text;
+    border: 1px solid $mobile-nav-border-color;
   }
 }
+
 .no-js .main-navigation ul ul {
   display: block;
 }
-@media screen and (min-width: $small) {
+
+@media screen and (min-width: $medium) {
+  button.menu-toggle {
+    display: none;
+  }
+  #headerMenu {
+    a, i:before, button:after {
+      color: $nav-link-color;
+    }
+    a:hover,
+    a:focus,
+    i:hover:before,
+    i:focus:before,
+    button:focus:after,
+    button:hover:after {
+      color: $nav-link-color-hover;
+    }
+  }
   nav.main-navigation {
-    .menu-primary-container {
-      display: block;
+    color: $nav-text-color;
+    // Link Color
+    li {
+      display: inline-block;
     }
     .nav-menu {
-      margin: 0;
       padding: 0;
+      display: block;
+      background: transparent;
+      margin: 0;
     }
     .sub-menu {
+      background: $nav-dropdown-background;
       z-index: $header-nav-zindex;
-      .sub-menu {
-
+      padding: 0 1em;
+      text-align: left;
+      li {
+        padding: 0;
       }
-    }
-    ul {
-      display: block;
-      .toggled-on {
+      a, i:before, button:after {
+        color: $light !important;
+      }
+      &.toggled-on {
         position: absolute;
         right: 0;
       }
-    }
-    ul ul {
-      padding: 0;
-      li {
-      }
-    }
-    li {
-      display: inline-block;
-      &:hover {
-      }
-    }
-    button.menu-toggle {
-      display: none;
-    }
-    .dropdown-toggle {
-      border: none;
-      &:after {
-      }
-    }
-    /* Mobile Menu & Button Colors */
-    .nav-menu {
-      background: transparent;
-    }
-    li.menu-item {
-      border: 1px solid transparent;
-      &:hover {
-        border-color: inherit !important;
-      }
-    }
-    a, i:before, button:after {
-      color: inherit;
-    }
-    button.menu-toggle {
-    }
-    .sub-menu {
-      background: $dark;
-      border-top: 1px solid $gray;
-      li {
-        &:hover {
-          background: $light;
-          > a, i:before, button:after {
-            color: $dark;
-          }
-        }
-      }
-
-      a, i:before, button:after {
-        color: $light;
+      .sub-menu {
+        position: initial !important;
+        padding-left: 1em;
       }
     }
   }
-}
-
-
-@media screen and (min-width: 1025px) {
 }

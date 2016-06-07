@@ -1,9 +1,11 @@
 @import "common/variables";
+@import "common/mixins";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+//@import "../../bower_components/animate-sass/_animate.scss";
+// end bower
 
 @import "common/global";
 @import "components/buttons";
@@ -12,11 +14,21 @@
 @import "components/grid";
 @import "components/wp-classes";
 @import "components/hero";
+/* Other Roots Resources */
+@import "roots/share-buttons";
 
-/* Mizner Addition */
+/* Mizner Addition: Components */
 @import "components/blurbs";
 @import "components/slider";
+@import "components/searchforms";
 
+
+/* Kyle Addition */
+@import "components/gravity";
+@import "components/cta";
+@import "components/video";
+
+/* General */
 @import "layouts/header";
 @import "layouts/navigation";
 @import "layouts/sidebar";
@@ -25,6 +37,14 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
+/* Mizner Addition: Layout */
+@import "layouts/header-transparent"; /* Optionial, add class per page */
+
+/* WooCommerce */
+@import "woocommerce/woocommerce";
+
 /* Mizner Addition: Home */
 @import "pages/home";
 
+/* Libraries */
+@import "libraries/animate";
