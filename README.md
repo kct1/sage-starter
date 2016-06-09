@@ -35,3 +35,9 @@
 5. `bower i`
 6. `gulp`
 7. `gulp watch`
+
+
+## To Do's
+   - add featurettes
+   - add blackTie
+   - add fixedHeader Support
