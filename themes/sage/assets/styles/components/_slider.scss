@@ -1,33 +1,148 @@
-.slides {
-  background: black;
-  height: 60vh;
-  p {
-    font-size: 1em;
+// Master Height for Carousel
+.carousel .item-background {
+  height: 700px;
+}
+@media screen and (min-width: $medium) {
+  .carousel .item-background {
+    height: 90vh;
   }
 }
-.carousel-inner>.item>a>img, .carousel-inner>.item>img {
-  opacity: .8;
-  height: 100%;
-  max-width: initial;
+
+// If a video is set
+
+.has-video {
+  .hero-container {
+
+  }
+  .hero-left {
+    .videoSizeHandler {
+      margin: 0 auto 1em;
+    }
+  }
+}
+@media screen and (min-width: $small) {
+  .has-video {
+    .hero-container {
+
+    }
+    .hero-left {
+      .videoSizeHandler {
+        width: 400px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .has-video {
+    .carousel-caption {
+      left: 5%;
+      right: 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hero_unit {
+      display: flex;
+      align-items: center;
+      > * {
+        flex: 1;
+      }
+    }
+    .hero-left {
+      padding: 0 2em;
+      .videoSizeHandler {
+        width: initial;
+      }
+    }
+    .hero-container {
+      padding: 0 1em;
+    }
+  }
+}
+
+// Fixes space below text so it's not too close to the dot controller
+.carousel-caption {
+  padding-bottom: 50px;
+}
+
+.carousel {
+  h1, h2, h3, h4, h5 {
+    margin: 0;
+  }
+  .item-background {
+    position: relative;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+  }
+  // .carousel-fade hijacks slides to a smoother fade transition
+  &.carousel-fade {
+    .carousel-inner {
+      .item {
+        transition-property: opacity;
+      }
+
+      .item,
+      .active.left,
+      .active.right {
+        opacity: 0;
+      }
+
+      .active,
+      .next.left,
+      .prev.right {
+        opacity: 1;
+      }
+
+      .next,
+      .prev,
+      .active.left,
+      .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    .carousel-control {
+      z-index: 2;
+    }
+  }
+
+  .embed-container {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.28);
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Initial fixes to normalize slider behavior
+.carousel-inner > .item > a > img, .carousel-inner > .item > img {
+  position: initial !important;
 }
 
 .carousel-indicators li {
   padding: 0;
+  margin: 1px 5px;
 }
+
 .carousel-indicators li.active {
   height: 12px;
 }
 
-@media screen and (min-width: $small) {
-  .slides {
-    max-height: 500px;
-    min-height: 70vh;
-    img {
-      opacity: .8;
-    }
-  }
-  .carousel-inner>.item>a>img, .carousel-inner>.item>img {
-    min-width: 100%;
-    height: auto;
-  }
-}
